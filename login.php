@@ -22,8 +22,8 @@ if (isset($_POST['loginbtn'])) {
         // starts the session created if login info is correct
         session_start();
         $_SESSION['username'] = $user['Username'];
-       
-        header("Location: sdsdsd.php");
+       $_SESSION['status']="logged";
+        header("Location: index.php");
         
         exit;
     } else {
