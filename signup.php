@@ -21,10 +21,10 @@ $regex ="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/" ;
 $res=preg_match($regex, $_POST['password']);
 if(!$res){
 
-header("Location: signup.php?$res");
+header("Location: signup.php);
 
 
-exit;}else{echo "Rezultati : ".$res; exit;}
+exit;}
 
 	
 if($password==$cpassword){
@@ -32,16 +32,18 @@ if($password==$cpassword){
 $email_chunks=explode("@", $email);
 if ($email_chunks[1]==$domains[0] || $email_chunks[0]==$domains[1] || $email_chunks[0]==$domains[2]) 
 {
-	
- 
-
-	}
-else{ echo "<script> alert('hotmail , gmail , outlook  are allowed only ')</script>"; }
-
-
 	$query="INSERT INTO users(Username,Email,Password) VALUES ('$username','$email','$password')";
 	$conn->exec($query);
-	echo "<script>alert(New record created succesfully )</script>";
+ echo "<script>alert('New record created succesfully ')</script>";
+
+	}
+else{ 
+
+echo "<script> alert('hotmail , gmail , outlook  are allowed only ')</script>"; }
+
+
+	
+	
 
 }
 else{
