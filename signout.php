@@ -2,7 +2,7 @@
 
  session_start();
    session_destroy();
-   $_SESSION['status']="loggedout";
+   setcookie("status",$_COOKIE["status"],time()-1);
    header("Location: index.php");
 
  ?>
