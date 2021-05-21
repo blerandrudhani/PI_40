@@ -21,8 +21,10 @@ if (isset($_POST['loginbtn'])) {
     {
         // starts the session created if login info is correct
         session_start();
-        $_SESSION['username'] = $user['Username'];
-       $_SESSION['status']="logged";
+        //
+       setcookie("status","loggedin",time()+300000);
+       $_SESSION['username'] = $user['Username'];
+       //$_SESSION['status']="logged";
         header("Location: index.php");
         
         exit;
