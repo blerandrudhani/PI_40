@@ -28,7 +28,7 @@ if(isset($_POST['submitbtn'])){
     $text=$_POST['your-message'];
     $jobsector=$_POST['jobsector'];
 
-        $fileLocation = getenv("DOCUMENT_ROOT") ."/PI". "/Candidates/".$emri.".txt";
+        $fileLocation = getenv("DOCUMENT_ROOT") ."/PI_40-main". "/Candidates/".$emri.".txt";
         $file = fopen($fileLocation,"w");
         $content =  $emri."\n".$email."\n".$phnum."\n".$jobsector."\n".$text;
         
