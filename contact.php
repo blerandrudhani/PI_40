@@ -86,7 +86,7 @@ if(isset($_POST['submitbtn'])){
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-  $("#setbtn").click(function(){
+ 
    var name=$("#name").val();
         $.ajax({
             url:"ajaxdb.php" ,
@@ -106,7 +106,7 @@ $(document).ready(function(){
                  
             });
     
-  });
+  
 });
 </script>
 
@@ -123,15 +123,7 @@ $(document).ready(function(){
             <p>HOME &nbsp; / &nbsp; Contacts</p>
         </div>
     </section>
- <div class="text-center mt30">
-        <button
-                        
-                        class="color-black border-black"
-                        
-                        
-                        id="setbtn"
-                >Set Email</button>
-                 </div>
+
     <section class="content-two-column-container-fluid">
         <form
                 class="candidate-cv-form form-validate p30"
