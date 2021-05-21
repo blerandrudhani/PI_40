@@ -13,9 +13,11 @@ if(session_status() !== PHP_SESSION_ACTIVE)
 }
 
 if (isset($_SESSION['status'])) {
+    echo "Status : ".$_COOKIE["status"];
   echo '<a href = "signout.php" style="float:right;">Sign Out</a><br>';
 }
 else{
+    echo "Status : "."not loggedin";
      echo '<a href = "login.php" style="float:right;">Sign In</a><br>';
 }
 
