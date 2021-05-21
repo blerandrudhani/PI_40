@@ -15,7 +15,18 @@ if(isset($_POST["signupbtn"])){
 	$email=stripslashes($_POST['email']);
 	$password=stripslashes(md5($_POST["password"]));
 	$cpassword=stripslashes(md5($_POST["comfpassword"]));
-
+	
+	
+       $stmt = $conn->prepare("SELECT * FROM users WHERE Username= ?");
+    $stmt->execute([$username]);
+    $user = $stmt->fetch();
+	
+	
+    if ($username==$user['Username']) {
+    	echo "<script> alert('User Exists!!! ')</script>";
+    	header("Location: signup.php");
+    	exit;
+    }
 
 $regex ="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/" ;
 $res=preg_match($regex, $_POST['password']);
