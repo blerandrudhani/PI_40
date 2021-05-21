@@ -46,7 +46,7 @@ if(isset($_POST['submitbtn'])){
     $email=$_POST['email'];
     $phnum=$_POST['phonenumber'];
     $text=$_POST['your-message'];
-        $fileLocation = getenv("DOCUMENT_ROOT") ."/PI". "/Contacts/".$emri.".txt";
+        $fileLocation = getenv("DOCUMENT_ROOT") ."/PI_40-main". "/Contacts/".$emri.".txt";
         $file = fopen($fileLocation,"w");
         $content =  $emri."\n".$email."\n".$phnum."\n".$text;
         
