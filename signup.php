@@ -32,7 +32,7 @@ $regex ="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/" ;
 $res=preg_match($regex, $_POST['password']);
 if(!$res){
 
-header("Location: signup.php);
+header("Location: signup.php");
 
 
 exit;}
